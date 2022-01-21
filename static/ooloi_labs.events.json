@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "df205cdb-f7a3-412c-b85d-2e29d0c1c520",
+		"name": "ooloi_labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new event",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "speaker1_avatar",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/WhatsApp Image 2022-01-20 at 12.44.40 PM.jpeg"
+						},
+						{
+							"key": "title",
+							"value": "Event Title",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Event about",
+							"type": "text"
+						},
+						{
+							"key": "speakers",
+							"value": "[{\"name\": \"speaker 1\",\"about\": \"speaker 1 about\",\"avatar\": \"speaker1_avatar\"},{\"name\": \"speaker 2\",\"about\": \"speaker 2 about\",\"avatar\": \"speaker2_avatar\"}]",
+							"contentType": "",
+							"type": "text"
+						},
+						{
+							"key": "moderators",
+							"value": "[{\"name\":\"moderator 1\",\"about\":\"moderator 1 about\",\"avatar\":\"moderator2_avatar\"},{\"name\":\"moderator 2\",\"about\":\"moderator 2 about\",\"avatar\":\"moderator2_avatar\"}]",
+							"contentType": "",
+							"type": "text"
+						},
+						{
+							"key": "speaker2_avatar",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/WhatsApp Image 2022-01-20 at 12.44.41 PM.jpeg"
+						},
+						{
+							"key": "moderator1_avatar",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/WhatsApp Image 2022-01-20 at 12.44.40 PM.jpeg"
+						},
+						{
+							"key": "moderator2_avatar",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/WhatsApp Image 2022-01-20 at 12.44.40 PM.jpeg"
+						},
+						{
+							"key": "resource1_image",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/online-store-free-templates-05.jpg"
+						},
+						{
+							"key": "resource2_file",
+							"type": "file",
+							"src": "/C:/Users/dell/Downloads/apollo.png"
+						},
+						{
+							"key": "tags",
+							"value": "[\"tag1\", \"tag2\"]",
+							"type": "text"
+						},
+						{
+							"key": "organisers",
+							"value": "[\"org1\", \"org2\"]",
+							"type": "text"
+						},
+						{
+							"key": "joiningInfo",
+							"value": "some joining info",
+							"type": "text"
+						},
+						{
+							"key": "resources",
+							"value": "[{\"resourceType\":\"paragraph\",\"content\":\"Hello this is paragraph\"},{\"resourceType\":\"list\",\"content\":[{\"resourceType\":\"unordered\",\"content\":\"apple\"},{\"resourceType\":\"unordered\",\"content\":\"orange\"}]},{\"resourceType\":\"image\",\"content\":\"resource1_image\"},{\"resourceType\":\"file\",\"content\":\"resource2_file\"},{\"resourceType\":\"link\",\"content\":\"https://somelink.com\"}]",
+							"type": "text"
+						},
+						{
+							"key": "when",
+							"value": "2022-01-20T19:25:19.634Z",
+							"type": "text"
+						},
+						{
+							"key": "start",
+							"value": "2022-01-20T19:25:19.634Z",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2022-01-20T19:25:19.634Z",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/events/61e9d192fbac3a0a3bdd7f13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"events",
+						"61e9d192fbac3a0a3bdd7f13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an event by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/events/61e9d192fbac3a0a3bdd7f13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"events",
+						"61e9d192fbac3a0a3bdd7f13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List events by filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an event by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/events/61e9d192fbac3a0a3bdd7f13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"events",
+						"61e9d192fbac3a0a3bdd7f13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an event by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "archive",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/events/61e977d63a21a083dfb6a0b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"events",
+						"61e977d63a21a083dfb6a0b8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

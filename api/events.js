@@ -12,7 +12,7 @@ const upload = (media, pre = "media") => {
 };
 
 const unUpload = (path) => {
-  fs.unlink(String(path).replace("/", ""), (err) => {
+  fs.unlinkSync(String(path).replace("/", ""), (err) => {
     if (err) throw err;
   });
 };
